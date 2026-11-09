@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research — Soobin Lim</title>
+<meta name="description" content="Research by Soobin Lim: gut virome and bile-acid metabolism, epigenetic brain aging, and spatial single-cell epigenomics. Click a project to expand.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>S</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,480;0,6..72,550;0,6..72,600;1,6..72,480&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header class="site">
+  <a class="wordmark" href="index.html">Soobin Lim</a>
+  <nav class="main" aria-label="Main">
+    <a href="index.html">about</a>
+    <a href="research.html" aria-current="page">research</a>
+    <a href="notes.html">notes</a>
+    <a href="mailto:soobinlim04@gmail.com">email</a>
+  </nav>
+</header>
+
+<main>
+  <h1>Research</h1>
+  <p class="lede">Bench + code, end to end. Click a project to expand.</p>
+
+  <div class="projects">
+    <details class="proj" id="tinoco">
+      <summary><span class="proj-title">Gut virome &amp; bile-acid metabolism — Tinoco Lab, UCLA</span><span class="date">2025–26</span></summary>
+      <div class="proj-body">
+        <p>As a Research Associate in the Tinoco Lab (UCLA Chemistry &amp; Biochemistry), I worked toward a genetic toolkit for knocking out viral-encoded bile salt hydrolases (BSH) — enzymes that reshape host bile-acid pools — so their effect can be measured without the host bacterium's own BSH confounding the result. Starting from 95 phage-encoded BSH candidates from the lab's pipeline, I filtered by viral-genome quality and provirus/prophage context, then used MAFFT alignments against the structurally characterized L. plantarum BSH (Q06115) and manually audited the conserved catalytic Cys2 residue. That narrowed 18 candidates to 9 high-confidence genes, and then to 4 final targets.</p>
+        <p>From there I screened for usable experimental hosts: bacterial strains lacking endogenous BSH that host BSH-carrying phages. I ran DIAMOND blastp searches (e-value ≤ 1e-4, ≥30% identity; five UniProt BSH references) across vendor-available Enterococcus genomes, and used geNomad coordinate overlap to classify each BSH as viral/prophage, plasmid, or bacterial — classifying 52 candidate genes across 31 strains and yielding a tiered list of primary candidate hosts. I cross-checked results against NCBI Assembly/BioSample records and culture-collection availability (ATCC, DSMZ, JCM, BEI), because a perfect candidate you cannot buy is not an experiment.</p>
+        <p>Finally, I turned the screen into a bench plan: a deletion-knockout protocol framework using upstream/downstream homology arms, a deletion plasmid, transformation and selection/counterselection, and confirmation by diagnostic PCR and sequencing — plus draft protocols for spectinomycin MIC testing and an LC-MS-based BSH activity assay, and hands-on preparation in bacterial culture (media, inoculation, anaerobic work). The point throughout: attribution first — in microbiome data, knowing whose enzyme it is <em>is</em> the experiment.</p>
+        <p class="small muted">Python, DIAMOND blastp, MAFFT, PHASTEST, geNomad, NCBI/UniProt/IMG-VR, knockout &amp; plasmid design, LC-MS assay planning, bacterial culture</p>
+      </div>
+    </details>
+
+    <details class="proj" id="brain">
+      <summary><span class="proj-title">Brain epigenomics &amp; aging — Luo Lab &amp; independent project, UCLA</span><span class="date">2024–25</span></summary>
+      <div class="proj-body">
+        <p>In the Luo Lab (UCLA Human Genetics), I worked on spatial and single-cell epigenomics of mouse and human brain tissue. At the bench, I ran pi-seq-based workflows end to end: tissue processing and permeabilization, in situ ATAC-seq, scRNA-seq, and DNA-methylation library preparation, with quality control at each step — the kind of workflow where a permeabilization mistake on Tuesday becomes an uninterpretable gradient on Friday. In Python (Scanpy/AnnData), I analyzed the datasets with PCA, UMAP, and Leiden clustering, using marker genes (for example FABP7, NEUROD6, GAD1/2, GFAP, OLIG2, MKI67) to annotate neuronal, glial, and progenitor populations — including gestational-week-18 human prefrontal cortex data.</p>
+        <p>For a related independent project (HUM GEN 199, mentored by Prof. Luo) on epigenetic aging, I compared human brain DNA-methylation profiles across mid-gestation, late gestation, infancy, and adulthood, defining developmental and age-associated trajectories across neuronal and glial cell types. I identified age-associated CpG sites and differentially methylated regions shared across life stages and brain regions, prioritizing loci linked to neurodevelopmental and neurodegenerative pathways. I built and cross-validated a region-specific epigenetic clock in Python to quantify how far a brain deviates from its expected age — and kept asking the harder question: whether a deviation means accelerated aging, developmental difference, or shifting cell composition, since a model that predicts is not yet biology explained.</p>
+        <p class="small muted">Spatial genomics (pi-seq), in situ ATAC-seq, scRNA-seq, methylation/NGS library prep &amp; QC, Python (Scanpy, UMAP, Leiden, regression, cross-validation)</p>
+      </div>
+    </details>
+
+    <details class="proj" id="hanyang">
+      <summary><span class="proj-title">Cancer drug response — Hanyang University</span><span class="date">2019–21</span></summary>
+      <div class="proj-body">
+        <p>My first research position: mammalian cell culture for drug-treatment experiments in breast and pancreatic cancer models, including comparisons under different nutrient and stress conditions. I quantified cell viability and apoptotic markers after fenbendazole treatment combined with curcumin or vitamin E, and compared fenbendazole against paclitaxel in chemoresistant pancreatic cancer and conventional breast cancer models to assess treatment efficacy and drug sensitization.</p>
+        <p class="small muted">Mammalian cell culture, viability &amp; apoptosis assays, drug-response analysis</p>
+      </div>
+    </details>
+
+    <details class="proj" id="deloitte">
+      <summary><span class="proj-title">Biotech market analysis — Deloitte Singapore &amp; Seoul</span><span class="date">2023, 2025</span></summary>
+      <div class="proj-body">
+        <p>Two summers in industry: in Singapore, analyzing biotech and healthcare market landscapes and company data to support M&amp;A evaluation; in Seoul, analyzing IVF and consumer-health markets for brand strategy. It gave me a working sense of how scientific platforms become fundable companies — and made clear I would rather be at the bench building them.</p>
+        <p class="small muted">Market landscape, company analysis, M&amp;A support</p>
+      </div>
+    </details>
+  </div>
+
+  <p class="contact-line">Full history in my <a href="Soobin_Lim_CV.pdf">CV (PDF)</a>. &nbsp;<a href="mailto:soobinlim04@gmail.com">soobinlim04@gmail.com</a></p>
+</main>
+
+<footer class="site">
+  <span class="mono">Soobin Lim — Bay Area</span>
+  <nav aria-label="Footer">
+    <a href="mailto:soobinlim04@gmail.com">email</a>
+    <a href="https://www.linkedin.com/in/soobin-lim-a87254282/">linkedin</a>
+    <a href="Soobin_Lim_CV.pdf">cv</a>
+    <a href="index.html">about</a>
+    <a href="notes.html">notes</a>
+  </nav>
+</footer>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>
